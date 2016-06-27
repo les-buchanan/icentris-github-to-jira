@@ -1,6 +1,6 @@
 // Listen for messages
 chrome.runtime.onMessage.addListener(function (msg, sender, sendResponse) {
-  var title_element = document.getElementsByClassName("js-issue-title")[0];
+  var title_element = document.getElementsByClassName("js-issue-title")[0] || document.getElementsByClassName("commit-title")[0];
   var commit_title = title_element.innerHTML;
   var task_id = null;
 
